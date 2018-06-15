@@ -26,13 +26,9 @@ function insertSort(list: any[]): any[] {
  * Recursive insertion sort. Complexity O(n^2)
  * @param list The list to be sorted. NOTE that the array object will be modified
  */
-function insertSortRecursive(list: any[]) {
-    insertSortR(list, list.length - 1);
-}
-
-function insertSortR(list: any[], n: number) {
+function insertSortRecursive(list: any[], n: number = list.length - 1) {
     if (n > 0) {
-        insertSortR(list, n - 1);
+        insertSortRecursive(list, n - 1);
         const x = list[n];
         let j = n - 1;
         while (j >= 0 && list[j] > x) {
@@ -43,13 +39,4 @@ function insertSortR(list: any[], n: number) {
     }
 }
 
-/**
- * Sort numbers using the build in sort function in JavaScript
- * @param array The array to be sorted.
- * @returns The sorted array
- */
-function sortNumbers(array: number[]): number[] {
-    return array.sort((x, y) => x - y);
-}
-
-export { insertSort, insertSortRecursive, sortNumbers };
+export { insertSort, insertSortRecursive };

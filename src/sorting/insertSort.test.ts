@@ -2,8 +2,8 @@ import generateArray from './generateArray';
 import {
     insertSort,
     insertSortRecursive,
-    sortNumbers,
 } from './insertSort';
+import { sortNumbers } from './sortNumbers';
 
 describe('Test insert sort', () => {
     test('Sort empty list', () => {
