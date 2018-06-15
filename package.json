@@ -3,6 +3,8 @@
     "version": "0.0.1",
     "description": "A collection of algorithms implemented in TypeScript",
     "main": "index.js",
+    "author": "Oliver Fleckenstein",
+    "license": "MIT",
     "scripts": {
         "test": "jest"
     },
@@ -18,8 +20,6 @@
             "jsx"
         ]
     },
-    "author": "Oliver Fleckenstein",
-    "license": "MIT",
     "devDependencies": {
         "@types/jest": "^23.1.0",
         "jest": "^23.1.0",
