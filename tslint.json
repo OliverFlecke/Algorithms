@@ -23,6 +23,7 @@
         "no-shadowed-variable": true,
         "curly": [true, "ignore-same-line"],
         "prefer-for-of": false,
+        "arrow-parens": false,
         "whitespace": [
             true,
             "check-branch",

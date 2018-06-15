@@ -1,12 +1,50 @@
-import { insertSort } from './insertSort';
+import generateArray from './generateArray';
+import {
+    insertSort,
+    insertSortRecursive,
+    sortNumbers,
+} from './insertSort';
 
 describe('Test insert sort', () => {
-    it('Sort empty list', () => {
+    test('Sort empty list', () => {
         expect(insertSort([])).toEqual([]);
     });
 
-    it('Sorting [3,2,1]', () => {
+    test('Sorting array of length 20', () => {
+        const list =  [ 8, 1, 7, 6, 1, 0, 14, 6, 14, 11, 13, 14, 10, 2, 9, 12, 15, 18, 2, 5 ];
+        const result = sortNumbers(list.slice());
+        expect(insertSort(list)).toEqual(result);
+    });
+
+    test('Sorting longer arrays', () => {
+        const array = generateArray(100);
+
+        const result = sortNumbers(array.slice());
+        const sortedArray = insertSort(array);
+
+        expect(sortedArray).toEqual(result);
+    });
+});
+
+describe('Test recursive insertion sorting', () => {
+    test('sort empty list', () => {
+        const list: any[] = [];
+        insertSortRecursive(list);
+        expect(list).toEqual([]);
+    });
+
+    test('Sorting [3,2,1]', () => {
         const list = [3, 2, 1];
-        expect(insertSort(list)).toEqual([1, 2, 3]);
+        insertSortRecursive(list);
+
+        expect(list).toEqual([1, 2, 3]);
+    });
+
+    test('Sorting longer arrays', () => {
+        const array = generateArray(100);
+        const result = sortNumbers(array.slice());
+        insertSortRecursive(array);
+
+        expect(array).toEqual(result);
     });
 });
