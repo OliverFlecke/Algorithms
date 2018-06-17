@@ -4,8 +4,10 @@
     "description": "A collection of algorithms implemented in TypeScript",
     "main": "index.js",
     "author": "Oliver Fleckenstein",
+    "repository": "https://github.com/OliverFlecke/Algorithms.git",
     "license": "MIT",
     "scripts": {
+        "build": "tsc",
         "test": "jest"
     },
     "jest": {
