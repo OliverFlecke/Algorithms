@@ -69,7 +69,7 @@ function merge(array: any[], left: number, middle: number, right: number) {
  * Merge sorting in more classic JavaScript syntax
  * @param
  */
-function jsMergeSort(array: any[]) {
+function jsMergeSort(array: any[]): any[] {
     if (array.length < 2) {
         return array;
     }
